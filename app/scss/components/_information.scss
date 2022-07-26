@@ -1,0 +1,67 @@
+@use "../util/" as *;
+@use "../globals/" as *;
+
+.information {
+	display: flex;
+	gap: 6.5rem;
+
+	@include breakpointIndividual("850px") {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.about {
+		flex: 1;
+		padding-top: 10.5rem;
+
+		&__title {
+			margin-bottom: 4rem;
+			font-size: clamp(26px, 5vw, 32px);
+			font-weight: 900;
+			@include gradientText();
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 2.5rem;
+		}
+
+		&__text {
+			font-size: 1.5rem;
+			color: var(--secondary-white);
+		}
+	}
+
+	.skills {
+		flex: 1;
+		padding-top: 10.5rem;
+
+		&__title {
+			margin-bottom: 4rem;
+			font-size: clamp(26px, 5vw, 32px);
+			font-weight: 900;
+			@include gradientText();
+		}
+
+		&__technologies {
+			display: grid;
+			grid-template-columns: repeat(4, minmax(40px, 1fr));
+			grid-gap: 3rem;
+
+			@include breakpointIndividual("1024px") {
+				grid-template-columns: repeat(3, minmax(50px, 1fr));
+			}
+
+			.technology {
+				text-align: center;
+				color: var(--secondary-white);
+
+				&__name {
+					font-weight: 400;
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}

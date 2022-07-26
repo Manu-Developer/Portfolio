@@ -1,0 +1,154 @@
+@use "../util/" as *;
+@use "../globals/" as *;
+
+.projects {
+	padding-top: 10.5rem;
+
+	&__title {
+		margin-bottom: 4rem;
+		font-size: clamp(26px, 5vw, 32px);
+		font-weight: 900;
+		@include gradientText();
+	}
+
+	.project {
+		padding: 2.5rem;
+		display: flex;
+		align-items: center;
+		gap: 6.5rem;
+		margin-bottom: 7rem;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+
+		&:nth-of-type(2n) {
+			.project__img {
+				order: 1;
+			}
+
+			.project__information {
+				text-align: left;
+			}
+
+			.project__links {
+				justify-content: flex-start;
+			}
+		}
+
+		@include breakpointIndividual("950px") {
+			max-width: 500px;
+			margin: 0 auto 7rem;
+			flex-direction: column;
+			gap: 5rem;
+
+			&:nth-of-type(2n) {
+				.project__img {
+					order: -1;
+				}
+			}
+		}
+
+		&__img {
+			flex: 1;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			border-radius: 0.5rem;
+			transition: all 0.25s ease-in;
+			background-color: hsla(264, 82%, 65%, 0.1);
+			mix-blend-mode: screen;
+
+			&:hover {
+				transform: scale(1.02);
+				transition: all 0.25s ease-in;
+				mix-blend-mode: normal;
+			}
+		}
+
+		&__information {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex: 1;
+			gap: 2rem;
+			text-align: right;
+
+			@include breakpointIndividual("900px") {
+				text-align: left;
+			}
+		}
+
+		&__title {
+			color: var(--violet);
+			font-size: clamp(20px, 5vw, 26px);
+			font-weight: 700;
+		}
+
+		&__description {
+			padding: 2rem;
+			font-size: 1.5rem;
+			color: var(--secondary-white);
+			background: var(--light-blue);
+			backdrop-filter: blur(30px);
+			border-radius: 0.5rem;
+		}
+
+		&__technologies-used {
+			font-size: 1.5rem;
+			color: var(--secondary-white);
+
+			span {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: var(--violet);
+			}
+		}
+
+		&__links {
+			display: flex;
+			justify-content: flex-end;
+			gap: 1.5rem;
+
+			@include breakpointIndividual("900px") {
+				justify-content: flex-start;
+			}
+
+			.project__link {
+				display: flex;
+				gap: 1rem;
+				align-items: center;
+				padding: 0.8rem 1.5rem;
+				transition: all 0.25s ease-in;
+				background: var(--violet);
+				border-radius: 0.5rem;
+
+				&:hover {
+					transition: all 0.25s ease-in;
+					transform: translateY(-4px);
+				}
+
+				.project__icon {
+					width: 25px;
+					height: 25px;
+				}
+
+				.project__text {
+					font-size: 1.3rem;
+					color: var(--main-white);
+				}
+			}
+		}
+	}
+
+	&__see-more {
+		color: var(--main-white);
+		font-size: 1.8rem;
+		font-weight: 400;
+		text-align: center;
+
+		a {
+			color: var(--violet);
+			font-size: 1.8rem;
+			font-weight: 700;
+			border-bottom: 1px solid var(--violet);
+		}
+	}
+}

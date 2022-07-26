@@ -1,0 +1,33 @@
+:root {
+	--main-white: #fcfcfc;
+	--secondary-white: #f6f6fa;
+	--dark-blue: #13132a;
+	--dark-blue2: #2c2b42;
+	--light-blue: #4e4b66;
+	--dark-violet: #965aef;
+	--violet: #a955d3;
+	--light-violet: #b53d9b;
+	--dark-gradient: linear-gradient(to right, var(--dark-violet), var(--light-violet) 100%);
+	--gradient-scroll: linear-gradient(to bottom, var(--dark-violet), var(--light-violet));
+	--glassheader: hsla(240, 38%, 12%, 0.8);
+}
+
+@mixin gradientText() {
+	background-image: var(--dark-gradient);
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+@mixin gradientBorders() {
+	border: 4px solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to right, var(--dark-violet), var(--light-violet));
+}
+
+@mixin setBoxShadow() {
+	box-shadow: 0 15px 30px -15px hsla(311, 58%, 54%, 0.6);
+}

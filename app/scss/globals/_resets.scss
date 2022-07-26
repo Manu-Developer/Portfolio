@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--dark-blue2);
+	border-radius: 100vw;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	background-color: var(--dark-blue);
+}
+
+h1,
+h2 {
+	width: fit-content;
+}
+
+li {
+	list-style: none;
+}
+
+a,
+a:active,
+a:visited {
+	text-decoration: none;
+}
+
+p {
+	line-height: 2.3rem;
+}
+
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 0 3rem;
+}
