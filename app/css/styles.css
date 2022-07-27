@@ -100,7 +100,7 @@ p {
   z-index: 10;
 }
 .header--scrolled {
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
 }
 
 .nav {
