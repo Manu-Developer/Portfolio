@@ -412,6 +412,7 @@ p {
   display: grid;
   grid-template-columns: repeat(4, minmax(40px, 1fr));
   grid-gap: 3rem;
+  place-items: center;
 }
 @media (max-width: 1024px) {
   .information .skills__technologies {

@@ -48,6 +48,7 @@
 			display: grid;
 			grid-template-columns: repeat(4, minmax(40px, 1fr));
 			grid-gap: 3rem;
+			place-items: center;
 
 			@include breakpointIndividual("1024px") {
 				grid-template-columns: repeat(3, minmax(50px, 1fr));
